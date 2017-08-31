@@ -1,0 +1,55 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <div id="container">
+        <h1>The Birthday Problem</h1>
+        <div style="margin: 20px">
+            Inspired by this
+            <a target="_blank"
+               href="https://www.reddit.com/r/AskReddit/comments/6wyncr/what_sounds_100_incorrect_but_is_actually_100/dmbp3at/">reddit
+                thread</a>
+        </div>
+        <div style="margin: 20px">
+            <quote style="">
+                "In the average classroom there is a better than 1 in 2 chance that two students have the same
+                birthday."
+            </quote>
+        </div>
+        <div style="margin: 20px">
+            Clicking GO will generate 23 random birthdays per sample, and look for matching pairs of birthdays within
+            each set
+        </div>
+        <div>How many samples would you like to run?</div>
+        <form onSubmit="return runTest()" style="margin: 20px">
+            <input type="number" id="samples" value="6" required/>
+            <button type="submit" id="go">GO</button>
+        </form>
+        <div id="pairCount"></div>
+        <div id="charts"></div>
+    </div>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        window.ga = function () {
+            ga.q.push(arguments)
+        };
+        ga.q = [];
+        ga.l = +new Date;
+        ga('create', 'UA-80613823-2', 'auto');
+        ga('send', 'pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>
